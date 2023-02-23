@@ -14,9 +14,8 @@
         android:theme="@style/Theme.ToDo"
         tools:targetApi="33">
         <activity
-            android:name=".SplashActivity"
-            android:exported="true"
-            android:theme="@style/noActionBar">
+            android:name=".splash.SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,9 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:theme="@style/noActionBar">
+            android:name=".home.MainActivity"
+            android:exported="false">
         </activity>
     </application>
 

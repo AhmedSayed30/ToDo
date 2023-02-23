@@ -3,10 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/drawable-night/dark_splash.xml" value="0.105" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/drawable-night/light_splash.xml" value="0.105" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/drawable-night/splash.xml" value="0.103" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/drawable-notnight/light_splash.xml" value="0.105" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/drawable-notnight/splash.xml" value="0.103" />
-        <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/layout/activity_splash.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/layout/fragment_list.xml" value="0.209375" />
+        <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/layout/fragment_setting.xml" value="0.209375" />
         <entry key="..\:/Users/pc/AndroidStudioProjects/ToDo/app/src/main/res/menu/btn_nav.xml" value="0.20520833333333333" />
       </map>
     </option>
