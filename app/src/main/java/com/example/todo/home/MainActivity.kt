@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.ListFragment
 import com.example.todo.R
 import com.example.todo.databinding.ActivityMainBinding
+import com.example.todo.home.addTask.AddTaskBottomSheet
 import com.example.todo.home.setting.SettingFragment
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-        viewBinding.btnNav.setOnItemSelectedListener{
+        viewBinding.bottomNavigationView.setOnItemSelectedListener{
             when(it.itemId){
                 R.id.nav_tasks_list->{
                     viewBinding.screenTitle.setText(R.string.title_tasks_list)
@@ -27,8 +28,18 @@ class MainActivity : AppCompatActivity() {
             }
             return@setOnItemSelectedListener true
         }
-        viewBinding.btnNav.selectedItemId = R.id.nav_tasks_list
+        viewBinding.bottomNavigationView.selectedItemId = R.id.nav_tasks_list
+        viewBinding.addTask.setOnClickListener{
+            showAddTaskBottomSheet()
+        }
+
     }
+
+    private fun showAddTaskBottomSheet() {
+        val addTaskBottomSheet = AddTaskBottomSheet();
+        addTaskBottomSheet.show(supportFragmentManager,null)
+    }
+
     fun showFragment(fragment: Fragment){
         supportFragmentManager
             .beginTransaction()

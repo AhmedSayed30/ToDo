@@ -2,4 +2,5 @@
     <string name="app_name">ToDo</string>
     <string name="title_tasks_list">To Do List</string>
     <string name="title_tasks_setting">Settings</string>
+    <string name="ok">OK</string>
 </resources>

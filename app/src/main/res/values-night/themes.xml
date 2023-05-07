@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ToDo" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Theme.ToDo" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue</item>
         <item name="colorPrimaryVariant">@color/dark_blue</item>
@@ -23,5 +23,9 @@
     </style>
     <style name="background" parent="Theme.ToDo">
         <item name="android:background">@color/navy</item>
+    </style>
+    <style name="primaryButtom" parent="ThemeOverlay.Material3.Button.ElevatedButton">
+        <item name="backgroundTint">@color/blue</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 </resources>
