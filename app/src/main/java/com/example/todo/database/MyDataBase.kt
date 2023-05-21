@@ -8,7 +8,7 @@ import com.example.todo.database.dao.TasksDao
 import com.example.todo.database.model.Task
 
 @Database(entities = [Task::class],
-version = 1,
+version = 2,
 exportSchema = false)
 abstract class MyDataBase : RoomDatabase(){
     abstract fun taskDao() : TasksDao

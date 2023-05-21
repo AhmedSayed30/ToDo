@@ -7,10 +7,12 @@ import androidx.fragment.app.ListFragment
 import com.example.todo.R
 import com.example.todo.databinding.ActivityMainBinding
 import com.example.todo.home.addTask.AddTaskBottomSheet
+import com.example.todo.home.addTask.onDismissListener
 import com.example.todo.home.setting.SettingFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewBinding:ActivityMainBinding
+    val tasksListFragment = ListFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -37,6 +39,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun showAddTaskBottomSheet() {
         val addTaskBottomSheet = AddTaskBottomSheet();
+        addTaskBottomSheet.onDismissListener = onDismissListener {
+            on
+        }
         addTaskBottomSheet.show(supportFragmentManager,null)
     }
 

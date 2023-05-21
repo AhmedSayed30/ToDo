@@ -18,11 +18,18 @@ class ListFragment : Fragment() {
         viewBinding = FragmentListBinding.inflate(inflater,container,false)
         return viewBinding.root
     }
-
+    lateinit var taskAdapter:TasksRecyclerAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        MyDataBase.getDataBase(requireActivity())
+        taskAdapter = TasksRecyclerAdapter(null)
+        viewBinding.tasksRecycler.adapter = taskAdapter
+        loadTasks()
+    }
+
+    private fun loadTasks() {
+        val tasks = MyDataBase.getDataBase(requireActivity())
             .taskDao()
             .getAllTasks()
+        taskAdapter.changeData(tasks)
     }
 }

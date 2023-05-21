@@ -25,7 +25,11 @@ class AddTaskBottomSheet :BottomSheetDialogFragment (){
                 viewBinding= FragmentAddTaskBinding.inflate(inflater,container,false)
                 return viewBinding.root
         }
-
+        var onDismissListener : onDismissListener?=null
+        override fun onDismiss(dialog: DialogInterface) {
+                super.onDismiss(dialog)
+                onDismissListener?.onDismiss()
+        }
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
                 super.onViewCreated(view, savedInstanceState)
                 setDate()
