@@ -41,4 +41,16 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">12sp</item>
     </style>
+    <style name="weekDayStyle" parent="Theme.ToDo">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="dateTextStyle" parent="Theme.ToDo">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="calenderHeaderStyle" parent="Theme.ToDo">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>

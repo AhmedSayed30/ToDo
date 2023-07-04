@@ -12,7 +12,7 @@ import com.example.todo.home.setting.SettingFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewBinding:ActivityMainBinding
-    val tasksListFragment = ListFragment()
+    val tasksListFragment = com.example.todo.home.list.ListFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.nav_tasks_list->{
                     viewBinding.screenTitle.setText(R.string.title_tasks_list)
-                    showFragment(ListFragment())
+                    showFragment(tasksListFragment)
                 }
                 R.id.nav_tasks_setting->{
                     viewBinding.screenTitle.setText(R.string.title_tasks_setting)
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
     private fun showAddTaskBottomSheet() {
         val addTaskBottomSheet = AddTaskBottomSheet();
         addTaskBottomSheet.onDismissListener = onDismissListener {
-            on
+            tasksListFragment.loadTasks()
         }
         addTaskBottomSheet.show(supportFragmentManager,null)
     }

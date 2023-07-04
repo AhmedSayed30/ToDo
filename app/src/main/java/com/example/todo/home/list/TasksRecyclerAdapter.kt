@@ -4,12 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.view.get
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.todo.database.model.Task
 import com.example.todo.databinding.ItemTaskBinding
 import kotlin.math.hypot
 
-class TasksRecyclerAdapter(var items: List<Task>?):RecyclerView.Adapter<ViewHolder>() {
+class TasksRecyclerAdapter(var items: List<Task>?):RecyclerView.Adapter<TasksRecyclerAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val viewBinding = ItemTaskBinding.inflate(
